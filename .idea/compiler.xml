@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="si-cafe" />
-        <module name="spring-integration-demos" />
+        <module name="si-basic" />
+        <module name="si-apps" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="si-cafe" target="1.8" />
       <module name="si-helloworld" target="1.8" />
+      <module name="sifilecopy" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="si-apps" options="-parameters" />
+      <module name="si-basic" options="-parameters" />
       <module name="si-cafe" options="-parameters" />
       <module name="si-helloworld" options="-parameters" />
     </option>
